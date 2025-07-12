@@ -18,11 +18,13 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 - Receive notifications for interactions
 - Use tags to classify questions
 - Be moderated by Admins
+  
 
 ## 👨‍💻 Team Members
 
 - **Kavya V** – kavyavkvp25@email.com
 - **Nishchitha JM** – nishchitha778@gmail.com
+- 
 
 ##  🚀 Features
 
@@ -36,6 +38,7 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
  🌙 Dark mode toggle (built-in support)  
  👩‍💻 Admin-only controls for moderation  
  📱Mobile responsive UI
+ 
 
 ## 🛠️ Tech Stack
 
@@ -56,6 +59,7 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 - Voting is handled on the frontend for simplicity.
 - Tags and search allow easy filtering of relevant content.
 - Toastify alerts are used for smooth user feedback.
+- 
 
 ## 📁 Project Structure
 ```bash
@@ -115,7 +119,6 @@ code editor - [VS code](https://code.visualstudio.com/)
    cd client
    npm install          
    npm start            
-   ```
    ```
 5. **Open to view it in the browser.**
    ```bash
