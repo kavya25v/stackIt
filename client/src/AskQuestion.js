@@ -1,80 +1,94 @@
+// File: client/src/AskQuestion.js
+import { toast } from 'react-toastify';
+
 import React, { useState } from 'react';
+// Uncomment below if you want rich text editor (after resolving ReactQuill setup)
+//import ReactQuill from 'react-quill';
+// import 'react-quill/dist/quill.snow.css';
 
 function AskQuestion() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [tags, setTags] = useState('');
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
   e.preventDefault();
-  const question = {
-    title,
-    description,
-    tags: tags.split(',').map(tag => tag.trim())
+
+  const payload = {
+    title: title.trim(),
+    description: description.trim(),
+    tags: tags.split(',').map(tag => tag.trim()).filter(Boolean),
   };
 
+  if (!payload.title || !payload.description || payload.tags.length === 0) {
+    toast.error("⚠️ All fields are required");
+    return;
+  }
+
   try {
-    const response = await fetch('http://localhost:5000/api/questions', {
+    const res = await fetch('http://localhost:5000/api/questions', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(question)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
 
-    const data = await response.json();
-    console.log('✅ Question saved to backend:', data);
-    alert('Question saved successfully!');
+    if (res.ok) {
+      toast.success("✅ Question submitted successfully!");
+      setTitle('');
+      setDescription('');
+      setTags('');
+    } else {
+      toast.error("❌ Failed to submit question.");
+    }
 
-    // Reset the form
-    setTitle('');
-    setDescription('');
-    setTags('');
   } catch (error) {
-    console.error('❌ Error saving question:', error);
-    alert('Failed to save question');
+    toast.error("❌ Something went wrong. Please try again.");
+    console.error(error);
   }
 };
 
+
   return (
     <div style={{ padding: '2rem' }}>
-      <h2>📝 Ask a New Question</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label><br />
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-            style={{ width: '100%', padding: '8px', marginBottom: '1rem' }}
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+          style={{ width: '100%', marginBottom: '1rem', padding: '0.5rem' }}
+        />
 
-        <div>
-          <label>Description:</label><br />
-          <textarea
-            rows="5"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
-            style={{ width: '100%', padding: '8px', marginBottom: '1rem' }}
-          />
-        </div>
+        {/* Use textarea if ReactQuill not working */}
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Describe your question..."
+          rows="4"
+          style={{ width: '100%', padding: '0.5rem' }}
+        ></textarea>
 
-        <div>
-          <label>Tags (comma separated):</label><br />
-          <input
-            type="text"
-            value={tags}
-            onChange={(e) => setTags(e.target.value)}
-            style={{ width: '100%', padding: '8px', marginBottom: '1rem' }}
-          />
-        </div>
+        {/* Uncomment below to use ReactQuill when ready */}
+        {/*
+        <ReactQuill
+          theme="snow"
+          value={description}
+          onChange={setDescription}
+          placeholder="Describe your question..."
+        />
+        */}
 
-        <button type="submit" style={{ padding: '10px 20px' }}>
-          Submit Question
-        </button>
+        <input
+          type="text"
+          placeholder="Tags (comma separated)"
+          value={tags}
+          onChange={(e) => setTags(e.target.value)}
+          required
+          style={{ width: '100%', marginTop: '1rem', padding: '0.5rem' }}
+        />
+
+        <button type="submit" style={{ marginTop: '1rem' }}>Submit</button>
       </form>
     </div>
   );
