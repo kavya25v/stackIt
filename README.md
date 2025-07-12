@@ -27,7 +27,8 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 - **Nishchitha JM** – nishchitha778@gmail.com
 
 ```
-## 🚀Features
+```
+##  🚀 Features
 
 - ✅ Ask questions using a rich text editor  
 - 📄 Submit and format answers  
@@ -39,7 +40,7 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 - 🌙 Dark mode toggle (built-in support)  
 - 👩‍💻 Admin-only controls for moderation  
 - 📱Mobile responsive UI
-
+```
 ```
 ## 🛠️ Tech Stack
 
@@ -53,7 +54,6 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 | IDE        | VS Code                  |
 
 ---
-
 
 ## 📄 How It Works
 When a user submits a question, it's stored in memory (mock DB).
@@ -93,13 +93,16 @@ stackit-hackathon/
 │   ├── package.json         
 │
 ├── .gitignore                    
-├── README.md                    
+├── README.md
+                
 ```
-```
+
 ## 🚧 Getting Started
+
 ### Prerequisites
 -[Node.js](https://nodejs.org/dist/v24.4.0/node-v24.4.0-x64.msi) installed  
 -code editor - [VS code](https://code.visualstudio.com/)
+```
 ```
 ### ⚙️Installation
 
@@ -127,7 +130,9 @@ stackit-hackathon/
    npm start            
    ```
    ```
-5. Open [http://localhost:3000/](http://localhost:3000/) to view it in the browser.
+5. **Open to view it in the browser.**
+   ```bash
+   [http://localhost:3000/](http://localhost:3000/)
    
    ```
 
