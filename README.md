@@ -19,29 +19,24 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 - Use tags to classify questions
 - Be moderated by Admins
 
----
-
 ## 👨‍💻 Team Members
 
 - **Kavya V** – kavyavkvp25@email.com
 - **Nishchitha JM** – nishchitha778@gmail.com
 
-```
-```
 ##  🚀 Features
 
-- ✅ Ask questions using a rich text editor  
-- 📄 Submit and format answers  
-- 👍/👎Upvote/downvote answers  
-- ✨Accept the best answer  
-- 🔔Toast notifications (success/error)  
-- 🎯Tag-based filtering  
-- 🔍Search questions by title or description  
-- 🌙 Dark mode toggle (built-in support)  
-- 👩‍💻 Admin-only controls for moderation  
-- 📱Mobile responsive UI
-```
-```
+ ✅ Ask questions using a rich text editor  
+ 📄 Submit and format answers  
+ 👍/👎Upvote/downvote answers  
+ ✨Accept the best answer  
+ 🔔Toast notifications (success/error)  
+ 🎯Tag-based filtering  
+ 🔍Search questions by title or description  
+ 🌙 Dark mode toggle (built-in support)  
+ 👩‍💻 Admin-only controls for moderation  
+ 📱Mobile responsive UI
+
 ## 🛠️ Tech Stack
 
 | Layer      | Tools Used               |
@@ -53,22 +48,15 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 | Hosting    | Localhost (for demo)     |
 | IDE        | VS Code                  |
 
----
 
 ## 📄 How It Works
-When a user submits a question, it's stored in memory (mock DB).
+- When a user submits a question, it's stored in memory (mock DB).
+- Answers are linked to questions by ID.
+- Admins can mark any answer as "Accepted".
+- Voting is handled on the frontend for simplicity.
+- Tags and search allow easy filtering of relevant content.
+- Toastify alerts are used for smooth user feedback.
 
-Answers are linked to questions by ID.
-
-Admins can mark any answer as "Accepted".
-
-Voting is handled on the frontend for simplicity.
-
-Tags and search allow easy filtering of relevant content.
-
-Toastify alerts are used for smooth user feedback.
-
----
 ## 📁 Project Structure
 ```bash
 stackit-hackathon/
@@ -100,10 +88,9 @@ stackit-hackathon/
 ## 🚧 Getting Started
 
 ### Prerequisites
--[Node.js](https://nodejs.org/dist/v24.4.0/node-v24.4.0-x64.msi) installed  
--code editor - [VS code](https://code.visualstudio.com/)
-```
-```
+[Node.js](https://nodejs.org/dist/v24.4.0/node-v24.4.0-x64.msi) installed  
+code editor - [VS code](https://code.visualstudio.com/)
+
 ### ⚙️Installation
 
 1. **Clone the repository:**
@@ -134,9 +121,6 @@ stackit-hackathon/
    ```bash
    [http://localhost:3000/](http://localhost:3000/)
    
-   ```
-
-
 📣 **Next Step:**
 - Paste this into your `README.md` file in `client/` or project root.
 - Commit and push:
@@ -145,7 +129,3 @@ stackit-hackathon/
 git add README.md
 git commit -m "📝final"
 git push
-
-
-
----
