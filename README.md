@@ -24,7 +24,7 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 
 - **Kavya V** – kavyavkvp25@email.com
 - **Nishchitha JM** – nishchitha778@gmail.com
-- 
+  
 
 ##  🚀 Features
 
