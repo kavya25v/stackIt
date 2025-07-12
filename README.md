@@ -28,24 +28,53 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- **Frontend:** React.js
-- **Backend:** Node.js + Express.js
-- **Database:** MongoDB (or PostgreSQL)
-- **Authentication:** JWT
-- **Rich Text Editor:** Quill.js / TipTap
-- **Version Control:** Git + GitHub
+| Layer      | Tools Used               |
+|------------|--------------------------|
+| Frontend   | React.js, HTML, CSS, Toastify |
+| Backend    | Node.js, Express.js      |
+| Editor     | ReactQuill (Rich Text)   |
+| Versioning | Git & GitHub             |
+| Hosting    | Localhost (for demo)     
 
 ---
 
-## 📌 Status
+## 🚀 Features
 
-- [x] Repository Setup  
-- [x] README Completed  
-- [x] Ask Question Page  
-- [x] Answer Logic  
-- [ ] Voting System  
-- [ ] Notifications  
-- [ ] Admin Features  
-- [ ] Final Demo Video  
+- ✅ Ask questions using a rich text editor  
+- ✅ Submit and format answers  
+- ✅ Upvote/downvote answers  
+- ✅ Accept the best answer  
+- ✅ Toast notifications (success/error)  
+- ✅ Tag-based filtering  
+- ✅ Search questions by title or description  
+- ✅ Dark mode toggle (built-in support)  
+- ✅ Admin-only controls for moderation  
+- ✅ Mobile responsive UI
+
+
+📄 How It Works
+When a user submits a question, it's stored in memory (mock DB).
+
+Answers are linked to questions by ID.
+
+Admins can mark any answer as "Accepted".
+
+Voting is handled on the frontend for simplicity.
+
+Tags and search allow easy filtering of relevant content.
+
+Toastify alerts are used for smooth user feedback.
+
+---
+
+📣 **Next Step:**
+- Paste this into your `README.md` file in `client/` or project root.
+- Commit and push:
+
+```bash
+git add README.md
+git commit -m "📝 Final updated README for submission"
+git push
+
