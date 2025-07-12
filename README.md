@@ -23,7 +23,7 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 
 ## 👨‍💻 Team Members
 
-- **Kavya V** – kavya.your@email.com
+- **Kavya V** – kavyavkvp25@email.com
 - **Nishchitha JM** – nishchitha778@gmail.com
 
 ---
