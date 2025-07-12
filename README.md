@@ -43,8 +43,8 @@ StackIt is a simple, user-friendly question-and-answer platform that supports co
 
 - [x] Repository Setup  
 - [x] README Completed  
-- [ ] Ask Question Page  
-- [ ] Answer Logic  
+- [x] Ask Question Page  
+- [x] Answer Logic  
 - [ ] Voting System  
 - [ ] Notifications  
 - [ ] Admin Features  
